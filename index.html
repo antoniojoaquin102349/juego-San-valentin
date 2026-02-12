@@ -11,9 +11,9 @@
 <div class="hearts" id="hearts"></div>
 
 <div class="container">
-  <h1>¿Quieres ser mi San Valentín? <span class="heart-beat">💖</span></h1>
+  <h1>San Valentín… premio asegurado 🎮💖 <span class="heart-beat">💖</span></h1>
   
-  <div class="message" id="message">Dale... no muerdo... (bueno... poquito 😏)</div>
+  <div class="message" id="message">Dale... no muerdo... (bueno... poquito 😁)</div>
   
   <button id="yes">SÍIIII 💕</button>
   <button id="no">No... por ahora</button>
@@ -22,20 +22,15 @@
 <script>
 // ────────────────────────────────────────────────
 const noPhrases = [
-  "Eso no era un no de verdad... ¿o sí?  😔",
-  "Y si te invito a un kinder Happy Hippo 🍫, ¿cambia la respuesta? ",
+  "AJH",
+  "Has empezado ya a jugar conmigoo 😃",
+  "Y si te invito a un kinder Happy Hippo 🍫, ¿Cambias la respuesta? ",
   "Es que verte sonreír ya me hace feliz",
-  "Ok, lo intento de nuevo con más dulzura 💌",
-  "Tu sonrisa me está ganando la partida…",
-  "Última oportunidad antes de que me ponga a suspirar en público 😅",
-  "En serio… ¿ni un poquito de sí? 👀",
-  "Error 404: Opción 'No' no encontrada ❤️",
-  "Estás rompiendo el algoritmo del amor...",
+  "Vale, pero el juego sigueee 😏",
   "El botón está muy pequeñito, prueba otra vez 👀",
-  "Esas uñas tan perfectas y largas no te dejan pulsar donde quieres... ¿quieres ayuda? 😏", 
-  "Si sigues diciendo no voy a empezar a hacer pucheros",
-  "Última oportunidad antes de que llore 😭✨",
-  "Ok... pero mis 5 caballos ya quieren pasear por el campo... 🐎🐎🐎🐎🐎",
+  "Igual esas uñas tan bonitas no te dejan pulsar donde quieres... ¿quieres ayuda? 😏", 
+  "Si sigues diciendo no voy a empezar a hacer pucheros 😭💕",
+  "Última vida para ganar un ... 😂 ",
 ];
 
 let noCount = 0;
@@ -50,7 +45,7 @@ yesBtn.addEventListener("click", () => {
   if (yesClicked) return;
   yesClicked = true;
 
-  message.innerHTML = "¡SÍIIIIII! 🎉💖 BINGOO  te has llevado un maravilloso LOCO a casa, diviertete con él Hania jejejej 😘😍💕";
+  message.innerHTML = "¡SÍIIIIII! 🎉💖 BINGOO  te has llevado un maravilloso LOCO, diviertete con él Hania jejejeje 😘😍💕";
 
   // ──── Aparece la foto ───────────────────────────────────────
   const photoContainer = document.createElement("div");
@@ -81,7 +76,7 @@ yesBtn.addEventListener("click", () => {
 
   // Opcional: mensaje adicional después de unos segundos
   setTimeout(() => {
-    message.innerHTML += "<br><br>Ahora solo falta que me digas cuándo nos vemos... yo el 17 voy a Málaga y el 20 a Marbella 😏❤️";
+    message.innerHTML += "<br><br>nos vemos...  en Marbella 😏❤️";
   }, 2000);
 });
 
@@ -93,7 +88,7 @@ noBtn.addEventListener("click", () => {
   if (noCount < noPhrases.length) {
     message.textContent = noPhrases[noCount];
   } else {
-    message.textContent = "Ya está... me rindo... pero sigo pensando que dirás sí mañana 😭💕";
+    message.textContent = "💖 GAME OVER 💖";
   }
 
   const size = Math.max(0.5, 1.4 - noCount * 0.12);
